@@ -168,7 +168,7 @@ export function Hero() {
                   background: "color-mix(in oklab, white 10%, transparent)",
                 }}
               >
-                Explore Executive Admin Services 
+                Explore Digital Marketing Services 
               </button>
             </Magnetic>
             <Magnetic className="block w-full min-w-0 flex-1 sm:inline-block sm:w-auto sm:flex-none" strength={0.2}>
