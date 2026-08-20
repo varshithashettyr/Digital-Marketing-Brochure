@@ -1175,7 +1175,7 @@ const keyServices: KeyService[] = baseKeyServices.map(
                     {/* CENTER ITSELF DOES NOT ROTATE */}
 
                     <a
-                      href="https://www.brickworkindia.com/services/executive-admin-services"
+                      href="https://www.brickworkindia.com/services/sales-and-digital-marketing"
                       target="_blank"
                       rel="noreferrer"
                       title="Global Business Support Services & Business Process Outsourcing | Brickwork"
@@ -1303,7 +1303,7 @@ const keyServices: KeyService[] = baseKeyServices.map(
                           group-hover:text-blue-200
                         "
                       >
-                         DigitalServices
+                         Digital Marketing Services 
                       </span>
 
                     </a>
