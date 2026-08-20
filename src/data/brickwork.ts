@@ -277,23 +277,23 @@ export const serviceCategories: ServiceCategory[] = [
 /** Hero infinity nodes — four pillars. */
 export const heroServiceNodes = [
   {
-    label: "Administration",
-    href: "https://www.brickworkindia.com/executive-admin/general-admin-services",
+    label: "Lead Generation",
+    href: "https://www.brickworkindia.com/sales-and-digital-marketing/lead-and-demand-generation",
     accent: "red" as const,
   },
-  {
-    label: "Content",
-    href: "https://www.brickworkindia.com/executive-admin/content-quality-services",
-    accent: "yellow" as const,
-  },
-  {
-    label: "Training",
-    href: "https://www.brickworkindia.com/executive-admin/training-coordination",
+    {
+    label: "Sales Collateral",
+    href: "https://www.brickworkindia.com/sales-and-digital-marketing/sales-collateral-design",
     accent: "orange" as const,
   },
   {
-    label: "Executive",
-    href: "https://www.brickworkindia.com/executive-admin/executive-presentations",
+    label: "Digital Presence",
+    href: "https://www.brickworkindia.com/sales-and-digital-marketing/digital-presence-management",
+    accent: "yellow" as const,
+  },
+  {
+    label: "Customer Engagement",
+    href: "https://www.brickworkindia.com/executive-admin/executive-presentationshttps://www.brickworkindia.com/sales-and-digital-marketing/customer-engagement-and-account-support",
     accent: "green" as const,
   },
 ] as const;
