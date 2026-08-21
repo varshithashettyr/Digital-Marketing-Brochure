@@ -65,7 +65,7 @@ export function Hero() {
               </span>
               <span className="flex flex-col leading-tight">
                 <span className="text-[10px] font-bold tracking-[0.16em] text-[#182b4c]/70 uppercase">
-                  Call
+                  {/* Call */}
                 </span>
                 <span className="text-sm font-semibold whitespace-nowrap text-[#105480]">
                   +1 (617) 608 2427
