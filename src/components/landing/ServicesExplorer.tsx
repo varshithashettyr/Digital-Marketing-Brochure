@@ -19,6 +19,20 @@ import {
   CalendarDays,
   Mail,
   CalendarCheck,
+  SearchCheck,
+Phone,
+MessageSquare,
+TrendingUp,
+MapPin,
+ShoppingCart,
+Settings,
+UsersRound,
+RefreshCw,
+Calculator,
+WalletCards,
+FileCheck,
+Database,
+Handshake,
   Plane,
   FileText,
   FileSignature,
@@ -108,154 +122,118 @@ export function ServicesExplorer() {
       service.title.trim().toLowerCase() === "executive admin services"
   );
 
-  const baseKeyServices: KeyService[] = [
-    {
-      name: "Proposals and RFP Management",
-      href: "https://www.brickworkindia.com/sales-and-digital-marketing/proposals-and-rfp-management",
-      color: LOGO_COLORS.blue,
-      icon: FileText,
-      subServices: [
-        ["RFP Analysis and Bid Qualification Services", FileText],
-        ["Proposal Writing and Proposal Development", FileSignature],
-        ["Pricing, Compliance, and Bid Management", BadgeDollarSign],
-        ["Value Proposition and Solution Articulation", Megaphone],
-        ["End-to-End Proposal Submission Management", ClipboardCheck],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/proposals-and-rfp-management", icon: icon as ElementType })),
-    },
-    {
-      name: "Customer Engagement & Account Support",
-      href: "https://www.brickworkindia.com/sales-and-digital-marketing/customer-engagement-and-account-support",
-      color: LOGO_COLORS.green,
-      icon: Users,
-      subServices: [
-        ["CRM Data Management and Administration", FolderOpen],
-        ["Customer Communication and Engagement Support", Mail],
-        ["Client Meeting Coordination and Follow-Ups", CalendarCheck],
-        ["Account Renewal and Upsell Support", BadgeDollarSign],
-        ["Customer Feedback and Satisfaction Tracking", ClipboardCheck],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/customer-engagement-and-account-support", icon: icon as ElementType })),
-    },
-    {
-      name: "Brand Identity & Logo Design",
-      href: "https://www.brickworkindia.com/sales-and-digital-marketing/brand-identity-and-logo-design",
-      color: LOGO_COLORS.orange,
-      icon: BriefcaseBusiness,
-      subServices: [
-        ["Brand Strategy and Market Positioning", BriefcaseBusiness],
-        ["Professional Logo Design Services", LayoutTemplate],
-        ["Logo Redesign and Brand Refresh", LayoutTemplate],
-        ["Corporate Brand Guidelines Development", FileText],
-        ["Typography and Color Palette Design", FileSpreadsheet],
-        ["Digital Brand Asset Creation", Globe],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/brand-identity-and-logo-design", icon: icon as ElementType })),
-    },
-    {
-      name: "Creative Design",
-      href: "https://www.brickworkindia.com/sales-and-digital-marketing/creative-design",
-      color: LOGO_COLORS.pink,
-      icon: LayoutTemplate,
-      subServices: [
-        ["Marketing Collateral Design", LayoutTemplate],
-        ["Social Media Creative Design", Share2],
-        ["Digital Advertising and Banner Design", Megaphone],
-        ["Infographic and Visual Content Design", BarChart3],
-        ["Print and Digital Creative Services", FileText],
-        ["Brand Storytelling and Visual Communication", Mic2],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/creative-design", icon: icon as ElementType })),
-    },
-    {
-      name: "Marketing & Communication Design",
-      href: "https://www.brickworkindia.com/sales-and-digital-marketing/marketing-and-communication-design",
-      color: LOGO_COLORS.blue,
-      icon: Megaphone,
-      subServices: [
-        ["Integrated Marketing Campaign Design", Megaphone],
-        ["Email Marketing and Newsletter Design", Mail],
-        ["Website and Landing Page Visuals", Globe],
-        ["Corporate Communications Design", FileText],
-        ["Brand Consistency and Quality Checks", ShieldCheck],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/marketing-and-communication-design", icon: icon as ElementType })),
-    },
-    {
-      name: "Lead & Demand Generation",
+const baseKeyServices: KeyService[] = [
+  {
+    name: "Lead Generation",
+    href: "https://www.brickworkindia.com/sales-and-digital-marketing/lead-and-demand-generation",
+    color: LOGO_COLORS.blue,
+    icon: BarChart3,
+    subServices: [
+      ["Lead Scoring", ClipboardCheck],
+      ["Lead Reporting", BarChart3],
+      ["Lead Research", SearchCheck],
+      ["Email Marketing", Mail],
+      ["Cold Calling", Phone],
+      ["SMS Marketing", MessageSquare],
+    ].map(([name, icon]) => ({
+      name: name as string,
       href: "https://www.brickworkindia.com/sales-and-digital-marketing/lead-and-demand-generation",
-      color: LOGO_COLORS.green,
-      icon: BarChart3,
-      subServices: [
-        ["B2B and B2C Prospect Development", Users],
-        ["Lead Qualification and Scoring", ClipboardCheck],
-        ["Email and Nurture Campaigns", Mail],
-        ["Cold Outreach Across Multiple Channels", Share2],
-        ["Appointment Setting and Awareness Campaigns", CalendarCheck],
-        ["Social Media Engagement", Share2],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/lead-and-demand-generation", icon: icon as ElementType })),
-    },
-    {
-      name: "CRM & Contact Management",
-      href: "https://www.brickworkindia.com/sales-and-digital-marketing/crm-and-contact-management",
-      color: LOGO_COLORS.orange,
-      icon: FolderOpen,
-      subServices: [
-        ["Lead and Contact Database Management", FolderOpen],
-        ["CRM Administration for Leading Platforms", UserCog],
-        ["Pipeline and Opportunity Management", Workflow],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/crm-and-contact-management", icon: icon as ElementType })),
-    },
-    {
-      name: "Sales Collateral Design",
-      href: "https://www.brickworkindia.com/sales-and-digital-marketing/sales-collateral-design",
-      color: LOGO_COLORS.pink,
-      icon: Presentation,
-      subServices: [
-        ["Flyer, Brochure, and One-Pager Design and Development", FileText],
-        ["Custom Email Template Creation and Professional Pitch Deck Design", Presentation],
-        ["Product Datasheet Creation and Formatting", FileSpreadsheet],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/sales-collateral-design", icon: icon as ElementType })),
-    },
-    {
-      name: "Digital Presence Management",
+      icon: icon as ElementType,
+    })),
+  },
+
+  {
+    name: "Content Marketing",
+    href: "https://www.brickworkindia.com/sales-and-digital-marketing/digital-presence-management",
+    color: LOGO_COLORS.green,
+    icon: FileText,
+    subServices: [
+      ["Website Content", Globe],
+      ["Social Media Content", Share2],
+      ["Email Marketing Content", Mail],
+      ["SEO-optimized Content", SearchCheck],
+      ["CRO-based Content", TrendingUp],
+      ["Flyers, Brochures, Newsletters, etc.", FileText],
+    ].map(([name, icon]) => ({
+      name: name as string,
       href: "https://www.brickworkindia.com/sales-and-digital-marketing/digital-presence-management",
-      color: LOGO_COLORS.blue,
-      icon: Globe,
-      subServices: [
-        ["LinkedIn Page Creation and Optimization", Share2],
-        ["SEO Support", Globe],
-        ["SEO-Optimized Website Content Writing", FileText],
-        ["Newsletter Drafting and Automation", Mail],
-        ["Custom Audience Targeting and Segmentation", Users],
-        ["Marketing Collateral Development", LayoutTemplate],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/digital-presence-management", icon: icon as ElementType })),
-    },
-    {
-      name: "Campaign & Funnel Support",
-      href: "https://www.brickworkindia.com/sales-and-digital-marketing/campaign-and-funnel-support",
-      color: LOGO_COLORS.green,
-      icon: Workflow,
-      subServices: [
-        ["Campaign Planning and Coordination (Omnichannel)", Workflow],
-        ["Landing Page and CTA Integration", Globe],
-        ["Email Campaign Management and Automation", Mail],
-        ["Performance Metrics Reporting", BarChart3],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/campaign-and-funnel-support", icon: icon as ElementType })),
-    },
-    {
-      name: "Social Media Support",
+      icon: icon as ElementType,
+    })),
+  },
+
+  {
+    name: "Search Engine Optimization (SEO)",
+    href: "https://www.brickworkindia.com/sales-and-digital-marketing/digital-presence-management",
+    color: LOGO_COLORS.orange,
+    icon: SearchCheck,
+    subServices: [
+      ["Generative Engine Optimization (GEO)", Globe],
+      ["Answer Engine Optimization (AEO)", SearchCheck],
+      ["Geotargetted/Local SEO", Globe],
+      ["E-Commerce SEO", Globe],
+      ["B2B/Corporate SEO", BriefcaseBusiness],
+      ["Customized SEO", SearchCheck],
+    ].map(([name, icon]) => ({
+      name: name as string,
+      href: "https://www.brickworkindia.com/sales-and-digital-marketing/digital-presence-management",
+      icon: icon as ElementType,
+    })),
+  },
+
+  {
+    name: "Social Media Marketing (SMM)",
+    href: "https://www.brickworkindia.com/sales-and-digital-marketing/social-media-support",
+    color: LOGO_COLORS.pink,
+    icon: Share2,
+    subServices: [
+      ["LinkedIn Marketing", Share2],
+      ["Instagram & Facebook Marketing", Share2],
+      ["User Engagement", Users],
+      ["Community Building", Users],
+      ["Performance Analysis & Tracking", BarChart3],
+      ["Posting & Scheduling", CalendarCheck],
+    ].map(([name, icon]) => ({
+      name: name as string,
       href: "https://www.brickworkindia.com/sales-and-digital-marketing/social-media-support",
-      color: LOGO_COLORS.orange,
-      icon: Share2,
-      subServices: [
-        ["Long-form Content Creation", FileText],
-        ["Short-form Writing", FileText],
-        ["Executive Ghostwriting", UserCog],
-        ["Copywriting", FileText],
-        ["Content Creation and Design", LayoutTemplate],
-        ["Publishing and Scheduling", CalendarCheck],
-        ["Community Management", Users],
-        ["Paid Campaign Management", Megaphone],
-        ["Strategy and Planning", Workflow],
-      ].map(([name, icon]) => ({ name: name as string, href: "https://www.brickworkindia.com/sales-and-digital-marketing/social-media-support", icon: icon as ElementType })),
-    },
-  ];
+      icon: icon as ElementType,
+    })),
+  },
+
+  {
+    name: "Paid Advertisements",
+    href: "https://www.brickworkindia.com/sales-and-digital-marketing/social-media-support",
+    color: LOGO_COLORS.blue,
+    icon: Megaphone,
+    subServices: [
+      ["Google Ads", Megaphone],
+      ["Meta Ads", Megaphone],
+      ["LinkedIn Ads", Share2],
+      ["PPC (Pay-per-Click) Advertising", Megaphone],
+      ["Retargeting Ads", Megaphone],
+      ["Performance Analysis & Tracking", BarChart3],
+    ].map(([name, icon]) => ({
+      name: name as string,
+      href: "https://www.brickworkindia.com/sales-and-digital-marketing/social-media-support",
+      icon: icon as ElementType,
+    })),
+  },
+
+  {
+    name: "Graphic Design",
+    href: "https://www.brickworkindia.com/sales-and-digital-marketing/creative-design",
+    color: LOGO_COLORS.green,
+    icon: LayoutTemplate,
+    subServices: [
+      ["Digital Brand Asset Creation", LayoutTemplate],
+      ["Logo Design & Branding", BriefcaseBusiness],
+      ["Typography & Colour Palette Design", FileSpreadsheet],
+    ].map(([name, icon]) => ({
+      name: name as string,
+      href: "https://www.brickworkindia.com/sales-and-digital-marketing/creative-design",
+      icon: icon as ElementType,
+    })),
+  },
+];
 
   // const shuffledPalette = shuffleBrandColors(
   //   Object.values(LOGO_COLORS)
@@ -1562,19 +1540,30 @@ const keyServices: KeyService[] = baseKeyServices.map(
                                     items-center
                                     justify-center
                                     rounded-xl
-                                    bg-slate-700/70
-                                    text-slate-200
-                                    transition-colors
+                                    transition-all
                                     duration-300
-                                    group-hover:text-white
+                                    group-hover:scale-110
                                   "
+                                  style={{
+                                    backgroundColor:
+                                      `${selectedService.color}22`,
+                                    color:
+                                      selectedService.color,
+                                    border:
+                                      `1px solid ${selectedService.color}55`,
+                                    boxShadow:
+                                      `0 0 16px ${selectedService.color}22`,
+                                  }}
                                 >
-                                  <SubIcon className="size-5" />
+                                  <SubIcon
+                                    className="size-5"
+                                    strokeWidth={2.2}
+                                  />
                                 </span>
 
                                 <span
                                   className="
-                                    text-[10px]
+                                    text-[14px]
                                     font-bold
                                     leading-snug
                                     text-white
@@ -1899,9 +1888,7 @@ const keyServices: KeyService[] = baseKeyServices.map(
                           service.name;
 
                         const nodeRingColor =
-                          getActiveRingColor(
-                            position.angle
-                          );
+                          service.color;
 
                         const ServiceIcon =
                           service.icon;
@@ -2408,12 +2395,23 @@ const keyServices: KeyService[] = baseKeyServices.map(
                                       items-center
                                       justify-center
                                       rounded-lg
-                                      bg-slate-800
-                                      text-slate-200
+                                      transition-all
+                                      duration-300
                                     "
+                                    style={{
+                                      backgroundColor:
+                                        `${selectedService.color}22`,
+                                      color:
+                                        selectedService.color,
+                                      border:
+                                        `1px solid ${selectedService.color}55`,
+                                      boxShadow:
+                                        `0 0 12px ${selectedService.color}18`,
+                                    }}
                                   >
                                     <SubIcon
                                       className="size-4"
+                                      strokeWidth={2.2}
                                     />
                                   </span>
 
